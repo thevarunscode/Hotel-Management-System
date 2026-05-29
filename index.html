@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LuxeStay — Hotel Management</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div id="app">
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-header">
+        <div class="logo">
+          <span class="logo-icon">✦</span>
+          <div class="logo-text">
+            <span class="logo-main">LuxeStay</span>
+            <span class="logo-sub">Management</span>
+          </div>
+        </div>
+        <button class="sidebar-toggle" id="sidebarToggle">&#9776;</button>
+      </div>
+      <nav class="sidebar-nav">
+        <a href="#" class="nav-item active" data-page="dashboard">
+          <span class="nav-icon">⊞</span>
+          <span class="nav-label">Dashboard</span>
+        </a>
+        <a href="#" class="nav-item" data-page="rooms">
+          <span class="nav-icon">⊡</span>
+          <span class="nav-label">Rooms</span>
+        </a>
+        <a href="#" class="nav-item" data-page="guests">
+          <span class="nav-icon">⊙</span>
+          <span class="nav-label">Guests</span>
+        </a>
+        <a href="#" class="nav-item" data-page="reservations">
+          <span class="nav-icon">⊟</span>
+          <span class="nav-label">Reservations</span>
+        </a>
+        <a href="#" class="nav-item" data-page="checkinout">
+          <span class="nav-icon">⊕</span>
+          <span class="nav-label">Check In / Out</span>
+        </a>
+        <a href="#" class="nav-item" data-page="invoices">
+          <span class="nav-icon">⊗</span>
+          <span class="nav-label">Invoices</span>
+        </a>
+      </nav>
+      <div class="sidebar-footer">
+        <div class="hotel-info">
+          <span class="hotel-name">Grand LuxeStay Hotel</span>
+          <span class="hotel-date" id="currentDate"></span>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content" id="mainContent">
+      <div id="pageContainer"></div>
+    </main>
+  </div>
+
+  <!-- MODALS -->
+  <div id="modalOverlay" class="modal-overlay hidden">
+    <div class="modal" id="modal">
+      <div class="modal-header">
+        <h3 id="modalTitle">Modal</h3>
+        <button class="modal-close" id="modalClose">&times;</button>
+      </div>
+      <div class="modal-body" id="modalBody"></div>
+    </div>
+  </div>
+
+  <!-- TOAST -->
+  <div id="toastContainer" class="toast-container"></div>
+
+  <!-- SCRIPTS -->
+  <script src="js/db.js"></script>
+  <script src="js/utils.js"></script>
+  <script src="js/pages/dashboard.js"></script>
+  <script src="js/pages/rooms.js"></script>
+  <script src="js/pages/guests.js"></script>
+  <script src="js/pages/reservations.js"></script>
+  <script src="js/pages/checkinout.js"></script>
+  <script src="js/pages/invoices.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
